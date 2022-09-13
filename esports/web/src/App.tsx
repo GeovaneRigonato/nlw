@@ -1,5 +1,28 @@
+//components //properties
+
+//component --> capitalized function that returns a set of HTML tags
+
+interface ButtonProps {
+title: string;
+}
+
+function Button(props: ButtonProps) {
+return(
+  <button>
+    {props.title}
+  </button>
+  )
+}
 function App() {
-return <h1>Hello NLW</h1>
+return (
+  
+  <div>
+  <Button title="Send 1"/>
+  <Button title="Send 2"/>
+  <Button title="Send 3"/>
+  <Button title="Hello World"/>
+  </div>
+)
 }
 
 export default App
