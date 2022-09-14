@@ -1,9 +1,13 @@
-import { View, Image } from 'react-native';
+import { View, Image, FlatList } from 'react-native';
 
 import logoImg from "../../assets/logo-nlw-esports.png";
-import { Heading } from '../../Components/Heading';
 
 import { styles } from './styles';
+import { GameCard } from '../../Components/GameCard';
+import { Heading } from '../../Components/Heading';
+
+import {GAMES} from '../../utils/games';
+
 
 export function Home() {
   return (
@@ -18,6 +22,21 @@ export function Home() {
       subtitle="Selecione o game que deseja jogar..."
       />
 
+      <FlatList
+      data={GAMES}
+      keyExtractor={item => item.id}
+      renderItem={({item}) => (
+        <GameCard
+      data={item}
+      />
+      )}
+      showsHorizontalScrollIndicator={false}
+      horizontal
+
+      contentContainerStyle={styles.contentList}
+      />
+
+      
     </View>
   );
 }
