@@ -1,42 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { ImageBackground, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StatusBar } from "react-native";
 
-interface ButtonProps {
-  title: string;
-}
-
-  function Button(props: ButtonProps){
-    return (
-        <TouchableOpacity>
-          <Text>
-            {props.title}
-          </Text>
-        </TouchableOpacity>
-    )
-  }
+import { Background } from './src/Components/Background';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>
-        App by Geovane Rigonato!
-      </Text>
-
-      <Button title="Click me --> 1" />
-      <Button title="Click me --> 2" />
-      <Button title="Click me --> 3" />
-
-      <StatusBar style="auto"/>
-    </View>
+    <Background>
+      <StatusBar
+      barStyle="light-content"
+      backgroundColor="transparent"
+      translucent
+      />
+    </Background>
   );
 
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
