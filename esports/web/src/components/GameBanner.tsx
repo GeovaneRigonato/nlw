@@ -12,6 +12,8 @@ function testAdsCount(adsCount: number) {
         return 'anúncios';
     }
 }
+
+
 export function GameBanner(props: GameBannerProps) {
     return (
         <a href="" className='relative rounded-lg overflow-hidden'>
