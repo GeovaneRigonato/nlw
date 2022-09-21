@@ -62,3 +62,7 @@ export function Home() {
     </Background>
   );
 }
+
+function axios(arg0: string) {
+  throw new Error('Function not implemented.');
+}

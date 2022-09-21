@@ -26,7 +26,7 @@ export function GameCard({ data, ...rest }: Props) {
             >
 
                 <LinearGradient
-                    colors={['rgba(0,0,0,0)', 'gray']}
+                    colors={['rgba(0,0,0,0)', 'rgba(0,0,0,0.8)']}
                     style={styles.footer}
                 >
                     <Text style={styles.name}>

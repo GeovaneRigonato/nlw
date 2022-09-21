@@ -8,9 +8,9 @@ import { DuoInfo } from '../DuoInfo';
 import { styles } from './styles';
 
 export interface DuoCardProps {
+    id: string;
     hourEnd: string;
     hourStart: string;
-    id: string;
     name: string;
     useVoiceChannel: boolean;
     weekDays: string[];
@@ -48,19 +48,18 @@ export function DuoCard({ data, onConnect }: Props) {
             />
 
             <TouchableOpacity
-                onPress={onConnect}
                 style={styles.button}
+                onPress={onConnect}
             >
 
                 <GameController
-                    size={20}
                     color={THEME.COLORS.TEXT}
+                    size={20}
                 />
 
                 <Text style={styles.buttonTitle}>
                     Conectar
                 </Text>
-
             </TouchableOpacity>
         </View>
     );
